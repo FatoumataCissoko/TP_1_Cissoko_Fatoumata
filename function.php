@@ -29,6 +29,11 @@ $encryptedPassword = password_hash($saltedMdp, PASSWORD_BCRYPT);
 //Verification du mdp saisi 
 
     $passwdEntered = "Cissoko";
+    if(password_verify(string $passwdEntered.$saltedMdp,$encryptedPassword)){
+        return "Mot de passe correcte ";
+    }else{
+        return "Mot de passe incorrecte "
+    }
 
 // Fonction pour ajouter le salt
 
