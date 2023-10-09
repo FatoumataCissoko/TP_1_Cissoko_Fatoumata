@@ -21,7 +21,7 @@ function mdpLengthIsvalid($mdpTovalid){
    return $reponses;
 
 }
-//Verification du mdp saisi 
+//Verification du mot de passe saisi 
 
     $passw = "Cissoko";
 
