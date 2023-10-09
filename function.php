@@ -24,7 +24,7 @@ function mdpLengthIsvalid($mdpTovalid){
 
 //Nous utiliserons la fonction predefinie 
 
-$encryptedPassword = password_hash($saltedPassword, PASSWORD_BCRYPT);
+$encryptedPassword = password_hash($saltedMdp, PASSWORD_BCRYPT);
 
 //Verification du mdp saisi 
 
