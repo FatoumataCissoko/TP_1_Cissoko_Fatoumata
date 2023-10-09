@@ -21,19 +21,9 @@ function mdpLengthIsvalid($mdpTovalid){
    return $reponses;
 
 }
-
-//Nous utiliserons la fonction predefinie 
-
-$encryptedPassword = password_hash($saltedMdp, PASSWORD_BCRYPT);
-
 //Verification du mdp saisi 
 
-    $passwdEntered = "Cissoko";
-    if(password_verify(string $passwdEntered.$saltedMdp,$encryptedPassword)){
-        return "Mot de passe correcte ";
-    }else{
-        return "Mot de passe incorrecte "
-    }
+    $passw = "Cissoko";
 
 // Fonction pour ajouter le salt
 
@@ -43,9 +33,12 @@ function addSalt($mdpToSalt){
 
     return $saltedMdp;
 }
-
 function encodeMdp($saltedMdp){
     $encodeMdp = sha1($saltedMdp);
     return $encodeMdp;
 }
+// Le Cryptage 
+$passw = password_hash($passw, PASSWORD_DEFAULT);
+// Affiche le mot de passe crypter
+echo password_hash($passw, PASSWORD_DEFAULT);  
 ?>
