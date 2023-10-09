@@ -1,5 +1,5 @@
 <?php 
-require_once("functions.php");
+require_once("function.php");
 var_dump($_POST);
 if($_POST){
     $mdp = $_POST['fname'];
