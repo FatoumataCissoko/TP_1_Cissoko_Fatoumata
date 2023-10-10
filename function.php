@@ -1,6 +1,7 @@
 <?php 
-function mdpLengthIsvalid($mdpTovalid){
 //Creation d'une fonction pour valider le mot de passe
+function mdpLengthIsvalid($mdpTovalid){
+// la condition pour la longueur du mot de passe
     $length = strlen($mdpTovalid);
     $reponses=[
         'isValid'=>true,
