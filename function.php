@@ -20,21 +20,25 @@ function mdpLengthIsvalid($mdpTovalid){
     }
     //Return de ma fonction
    return $reponses;
-   
+    
+}
+ $passw = "Cissoko";
 // Fonction pour ajouter le salt
-   $salt = 'Ma_Fille@2022!';
+function addSalt($mdpToSalt){
+    $salt = 'Ma_Fille@2022!';
     $saltedMdp =$salt.$mdpToSalt.$salt;
-
     return $saltedMdp;
-
+    echo $saltedMdp;
+    echo "mot de passe avec le saled est: " . $saltedMdp;
+    echo $salt.$mdpTovalid;
+}
+function encodeMdp($saltedMdp){
     $encodeMdp = sha1($saltedMdp);
     return $encodeMdp;
+    echo $encodeMdp;
+    echo "mot de passe avec encodage" . $encodeMdp;
 
 }
-//Verification du mot de passe saisi 
-
-    $passw = "Cissoko";
-
 // Le Cryptage 
 $passw = password_hash($passw, PASSWORD_DEFAULT);
 // Affiche le mot de passe crypter
